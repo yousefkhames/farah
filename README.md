@@ -14,6 +14,15 @@ Arabic and English, right-to-left ready, built for the phone first.</p>
 <img src="docs/guests-en.png" width="23%" alt="Guest list">
 </p>
 
+## Screenshots
+
+Captured from the live site (https://yousefkhames.github.io/farah/).
+
+<p>
+  <img src="docs/screenshots/live-desktop.png" alt="farah desktop view" width="640">
+  <img src="docs/screenshots/live-mobile.png" alt="farah mobile view" width="200">
+</p>
+
 ## The pitch
 
 Planning a wedding in Egypt means a hall deposit here, a zaffa band there, shabka, a photographer, a guest list that grows every week. Farah keeps it in one place. Set the date and the budget, and you get a countdown, a checklist with real due dates, a vendor book with call and WhatsApp buttons, and a guest count that shows what the hall and buffet cost per person.
