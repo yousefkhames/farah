@@ -90,3 +90,13 @@ t('i18n has same keys in both languages', () => {
   assert.deepStrictEqual(a, b);
 });
 console.log(n + ' tests passed');
+
+// round 2: an unrelated JSON object must not be accepted as a backup (it used to wipe the plan)
+{
+  const L2 = require('../logic.js'); const a2 = require('node:assert');
+  a2.equal(L2.isBackup({}), false); a2.equal(L2.isBackup({ foo: 1 }), false); a2.equal(L2.isBackup([1]), false); a2.equal(L2.isBackup(null), false);
+  a2.equal(L2.isBackup({ expenses: [] }), true);
+  a2.equal(L2.isBackup(JSON.parse(JSON.stringify(L2.sampleState('2026-11-26')))), true);
+  a2.equal(L2.hasData(L2.emptyState()), false); a2.equal(L2.hasData(L2.sampleState('2026-11-26')), true);
+  console.log('2 round-2 tests passed');
+}

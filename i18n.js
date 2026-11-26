@@ -28,7 +28,7 @@
       backup: 'نسخة احتياطية', exportJson: 'حفظ نسخة (JSON)', importJson: 'استرجاع نسخة', print: 'طباعة الملخص',
       loadSample: 'حمّل بيانات تجريبية', reset: 'مسح كل البيانات', resetAsk: 'هتتمسح كل بياناتكم من المتصفح ده. متأكدين؟',
       sampleAsk: 'البيانات الحالية هتتبدل ببيانات تجريبية. متأكدين؟',
-      importBad: 'الملف ده مش نسخة صالحة من فرح', importOk: 'تم استرجاع النسخة', saved: 'اتحفظ', deleted: 'اتحذف',
+      importBad: 'الملف ده مش نسخة صالحة من فرح', importOk: 'تم استرجاع النسخة', importAsk: 'الاستيراد هيستبدل كل بيانات الفرح الحالية على الجهاز ده. تكمّل؟', saved: 'اتحفظ', deleted: 'اتحذف',
       privacy: 'البيانات محفوظة في المتصفح ده بس ومش بتتبعت لأي مكان. خدوا نسخة احتياطية من وقت للتاني.',
       confirmDel: 'تحذف', warnStorage: 'المتصفح مش سامح بالحفظ. البيانات هتضيع لما تقفلوا الصفحة.'
     },
@@ -59,7 +59,7 @@
       backup: 'Backup', exportJson: 'Save a backup (JSON)', importJson: 'Restore a backup', print: 'Print summary',
       loadSample: 'Load sample data', reset: 'Erase all data', resetAsk: 'This erases all your data from this browser. Sure?',
       sampleAsk: 'Your current data will be replaced with sample data. Sure?',
-      importBad: 'That file is not a valid Farah backup', importOk: 'Backup restored', saved: 'Saved', deleted: 'Deleted',
+      importBad: 'That file is not a valid Farah backup', importOk: 'Backup restored', importAsk: 'Importing replaces all wedding data currently on this device. Continue?', saved: 'Saved', deleted: 'Deleted',
       privacy: 'Your data lives in this browser only and is never sent anywhere. Save a backup now and then.',
       confirmDel: 'Delete', warnStorage: 'This browser blocks saving. Your data will be lost when you close the page.'
     }

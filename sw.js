@@ -1,5 +1,5 @@
 // Offline shell: precache app files, then serve cache first and refresh in the background.
-const CACHE='farah-v1';
+const CACHE='farah-v2';
 const FILES=["./", "app.js", "i18n.js", "icon-192.png", "index.html", "logic.js", "logo.svg", "manifest.webmanifest", "style.css"];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});

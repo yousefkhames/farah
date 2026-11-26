@@ -154,6 +154,14 @@
   }
 
   // Normalise untrusted data (import or storage) into a safe state.
+  // A backup must look like a Farah file: an unrelated JSON object must not wipe the plan.
+  function isBackup(o) {
+    return !!o && typeof o === 'object' && !Array.isArray(o) &&
+      ['expenses', 'guests', 'vendors', 'tasks', 'couple', 'budget', 'date'].some(function (k) { return k in o; });
+  }
+  function hasData(s) {
+    return !!(s && (s.expenses.length || s.guests.length || s.vendors.length || s.couple.a || s.couple.b || s.date || s.budget || s.tasks.some(function (t) { return t.done; })));
+  }
   function sanitize(o) {
     if (!o || typeof o !== 'object' || Array.isArray(o)) throw new Error('bad file');
     var s = emptyState();
@@ -226,7 +234,7 @@
     CATS: CATS, CAT_IDS: CAT_IDS, STATUSES: STATUSES, RSVPS: RSVPS, SIDES: SIDES, DEFAULT_TASKS: DEFAULT_TASKS,
     num: num, str: str, uid: uid, isoDate: isoDate, daysBetween: daysBetween, addDays: addDays, dueISO: dueISO,
     emptyState: emptyState, budgetSummary: budgetSummary, guestSummary: guestSummary, taskView: taskView,
-    taskProgress: taskProgress, fmtMoney: fmtMoney, guestsCSV: guestsCSV, csvCell: csvCell, sanitize: sanitize,
+    taskProgress: taskProgress, fmtMoney: fmtMoney, guestsCSV: guestsCSV, csvCell: csvCell, sanitize: sanitize, isBackup: isBackup, hasData: hasData,
     sampleState: sampleState
   };
 });

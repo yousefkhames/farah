@@ -270,7 +270,12 @@
       if (file.size > 2e6) { toast(t('importBad')); return; }
       var r = new FileReader();
       r.onload = function () {
-        try { var lang = S.lang; S = L.sanitize(JSON.parse(r.result)); save(); closeModal(); render(); toast(t('importOk')); }
+        try {
+          var raw = JSON.parse(r.result); if (!L.isBackup(raw)) throw new Error('bad file');
+          var next = L.sanitize(raw);
+          var apply = function () { S = next; save(); closeModal(); render(); toast(t('importOk')); };
+          if (L.hasData(S)) confirmBox(t('importAsk'), t('importJson'), apply); else apply();
+        }
         catch (err) { toast(t('importBad')); }
       };
       r.readAsText(file);

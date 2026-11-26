@@ -48,6 +48,7 @@ python3 -m http.server 8000
 node test/logic.test.js     # unit tests, no install needed
 node test/e2e.js            # click-through in headless Chrome (needs google-chrome)
 node test/e2e.js https://yousefkhames.github.io/farah/   # same run against the live site
+npm i puppeteer-core && node test/flow.js   # data flow: export, reset, import, junk and hostile files, replace-confirm (13 checks)
 ```
 
 The click-through uses real mouse and keyboard events on a phone-sized screen: first run, settings, budget, checklist, vendors, guests, search and filters, language switch, reload persistence, corrupt storage, HTML-injection check, reset and sample data.
