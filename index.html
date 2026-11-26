@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farah | فرح</title>
+<meta name="description" content="Egyptian wedding planner: budget, checklist, vendors and guest count. Arabic and English. Runs in your browser.">
+<meta name="theme-color" content="#3a1230">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="logo.svg" alt="" width="36" height="36"><div><b id="brandName">فرح</b><small id="brandSub"></small></div></div>
+  <div class="top-actions">
+    <button class="chip" id="langBtn" type="button"></button>
+    <button class="chip" id="setBtn" type="button"></button>
+  </div>
+</header>
+<main id="app" tabindex="-1"></main>
+<nav class="tabs" id="tabs" aria-label="Sections"></nav>
+<noscript><p style="padding:20px;text-align:center">Farah needs JavaScript. | فرح محتاج جافاسكريبت.</p></noscript>
+<div id="modal" class="overlay" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="logic.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
