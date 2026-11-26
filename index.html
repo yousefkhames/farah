@@ -6,6 +6,8 @@
 <title>Farah | فرح</title>
 <meta name="description" content="Egyptian wedding planner: budget, checklist, vendors and guest count. Arabic and English. Runs in your browser.">
 <meta name="theme-color" content="#3a1230">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -25,5 +27,6 @@
 <script src="logic.js"></script>
 <script src="i18n.js"></script>
 <script src="app.js"></script>
+<script>if('serviceWorker' in navigator&&location.protocol!=='file:')addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script>
 </body>
 </html>

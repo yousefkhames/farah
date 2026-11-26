@@ -28,6 +28,7 @@ Planning a wedding in Egypt means a hall deposit here, a zaffa band there, shabk
 - **Cost per guest.** Venue plus catering divided by expected guests.
 - **Arabic and English.** One tap to switch, with full RTL layout and Arabic numerals.
 - **Backup.** Save and restore everything as a JSON file. Print a summary. Load sample data to try it.
+- **Installable and offline.** A service worker caches the app after the first visit, so it opens and works without a connection and can be added to the home screen.
 
 ## Tech
 
